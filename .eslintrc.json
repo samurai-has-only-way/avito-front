@@ -8,6 +8,8 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "@next/next/no-document-import-in-page": "off",
+    "@next/next/no-title-in-document-head": "off",
     "prefer-const": "error",
     "semi": [
       "error",
@@ -26,13 +28,6 @@
     "keyword-spacing": "error",
     "space-unary-ops": "error",
     "no-duplicate-imports": "error",
-    "max-len": [
-      "warn",
-      {
-        "code": 80,
-        "tabWidth": 2
-      }
-    ],
     "object-curly-spacing": [
       "error",
       "always",
