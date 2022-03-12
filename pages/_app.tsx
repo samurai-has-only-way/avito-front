@@ -1,7 +1,9 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import 'antd/dist/antd.css';
 
 import '../styles/globals.scss';
+import { Header } from '../layouts/Header/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header />
       <Component {...pageProps} />;
     </>
   );

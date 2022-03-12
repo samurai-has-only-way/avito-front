@@ -2,7 +2,8 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "eslint:recommended"
   ],
   "plugins": [
     "@typescript-eslint"
@@ -10,6 +11,11 @@
   "rules": {
     "@next/next/no-document-import-in-page": "off",
     "@next/next/no-title-in-document-head": "off",
+    "react/self-closing-comp": ["error", {
+      "component": true,
+      "html": true
+    }],
+    "indent": ["error", 2],
     "prefer-const": "error",
     "semi": [
       "error",
@@ -19,7 +25,7 @@
       "error",
       "single"
     ],
-    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
     "@typescript-eslint/no-explicit-any": "error",
     "no-trailing-spaces": "error",
     "no-const-assign": "error",
@@ -34,7 +40,8 @@
       {
         "objectsInObjects": true
       }
-    ]
+    ],
+    "max-len": ["error", { "code": 80 }]
   },
   "settings": {
     "import/resolver": {
