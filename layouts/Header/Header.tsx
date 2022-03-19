@@ -5,14 +5,16 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Input } from 'antd';
-import { 
-  Container, 
-  Burger, 
-  Logo, 
-  Login, 
-  HeaderItem, 
-  HeaderInput, 
-  Basket } from './Header.styled';
+
+import {
+  Container,
+  Burger,
+  Logo,
+  Login,
+  HeaderItem,
+  HeaderInput,
+  Basket,
+} from './Header.styled';
 
 const Header: React.FC = () => {
   return (
@@ -24,7 +26,11 @@ const Header: React.FC = () => {
         <img src="https://static.wbstatic.net/i/header/logo-v1.svg"  alt="" />
       </Logo>
       <HeaderInput>
-        <Input size="middle" placeholder="Я ищу..." prefix={<SearchOutlined />} />
+        <Input
+          size="middle"
+          placeholder="Я ищу..."
+          prefix={<SearchOutlined />}
+        />
       </HeaderInput>
       <Login>
         <UserOutlined />
