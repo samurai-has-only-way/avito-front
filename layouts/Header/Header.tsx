@@ -5,6 +5,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Input } from 'antd';
+import Img from 'next/image';
 
 import {
   Container,
@@ -23,7 +24,7 @@ const Header: React.FC = () => {
         <Burger style={{ cursor: 'pointer' }} />
       </HeaderItem>
       <Logo>
-        <img src="https://static.wbstatic.net/i/header/logo-v1.svg"  alt="" />
+        <Img src="https://static.wbstatic.net/i/header/logo-v1.svg"  alt="" />
       </Logo>
       <HeaderInput>
         <Input
