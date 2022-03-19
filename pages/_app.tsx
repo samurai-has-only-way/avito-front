@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 
 import '../styles/globals.scss';
 import { Header } from '../layouts/Header/Header';
+import { Footer } from '../layouts/Footer/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Header />
       <Component {...pageProps} />;
+      <Footer />
     </>
   );
 }

@@ -1,11 +1,18 @@
 import React from 'react';
 import {
   SearchOutlined,
-  LoginOutlined,
+  ShoppingOutlined,
+  UserOutlined,
 } from '@ant-design/icons';
-
-import { Container, Burger, Logo, Login, HeaderItem } from './Header.styled';
 import { Input } from 'antd';
+import { 
+  Container, 
+  Burger, 
+  Logo, 
+  Login, 
+  HeaderItem, 
+  HeaderInput, 
+  Basket } from './Header.styled';
 
 const Header: React.FC = () => {
   return (
@@ -13,18 +20,20 @@ const Header: React.FC = () => {
       <HeaderItem>
         <Burger style={{ cursor: 'pointer' }} />
       </HeaderItem>
-      <Logo>WILDBERRIES</Logo>
-      <HeaderItem>
-        <Input size="middle" placeholder="search" prefix={<SearchOutlined />} />
-      </HeaderItem>
+      <Logo>
+        <img src="https://static.wbstatic.net/i/header/logo-v1.svg"  alt="" />
+      </Logo>
+      <HeaderInput>
+        <Input size="middle" placeholder="Я ищу..." prefix={<SearchOutlined />} />
+      </HeaderInput>
       <Login>
-        <LoginOutlined />
+        <UserOutlined />
         <p style={{ margin: 0 }}>Войти</p>
       </Login>
-      <Login>
-        <LoginOutlined />
-        <p style={{ margin: 0 }}>Войти</p>
-      </Login>
+      <Basket>
+        <ShoppingOutlined />
+        <p style={{ margin: 0 }}>Корзина</p>
+      </Basket>
     </Container>
   );
 };
