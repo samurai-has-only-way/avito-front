@@ -18,18 +18,28 @@ import {
 } from './Header.styled';
 
 const Header: React.FC = () => {
+  const logoLoader = () => {
+    return 'https://static.wbstatic.net/i/header/logo-v1.svg';
+  };
+
   return (
     <Container>
       <HeaderItem>
         <Burger style={{ cursor: 'pointer' }} />
       </HeaderItem>
       <Logo>
-        <Img src="https://static.wbstatic.net/i/header/logo-v1.svg"  alt="" />
+        <Img
+          loader={logoLoader}
+          src='https://static.wbstatic.net/i/header/logo-v1.svg'
+          width={350}
+          height={75}
+          alt=''
+        />
       </Logo>
       <HeaderInput>
         <Input
-          size="middle"
-          placeholder="Я ищу..."
+          size='middle'
+          placeholder='Я ищу...'
           prefix={<SearchOutlined />}
         />
       </HeaderInput>
