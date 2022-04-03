@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { MenuOutlined } from '@ant-design/icons';
 
 export const Container = styled.div`
   background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
@@ -9,11 +8,42 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Burger = styled(MenuOutlined)`
+export const Burger = styled.div`
   border: 1px solid rgba(255,255,255,.4);
   border-radius: 8px;
-  padding: 9px;
+  padding:21px 9px;
   font-size: 25px;
+  position: relative;
+  cursor: pointer;
+`;
+
+export const SpanCenter = styled.span`
+  width: 28px;
+  height: 4px;
+  display: block;
+  background: white;
+  border-radius: 4px;
+  position: relative;
+`;
+
+export const SpanTop = styled.span`
+  width: 28px;
+  height: 4px;
+  display: block;
+  background: white;
+  border-radius: 4px;
+  position: absolute;
+  top: 12px;
+`;
+
+export const SpanBottom = styled.span`
+  width: 28px;
+  height: 4px;
+  display: block;
+  background: white;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 12px;
 `;
 
 export const Logo = styled.div`
@@ -28,6 +58,17 @@ export const HeaderInput = styled.div`
   padding: 16px 120px 16px 26px;
   margin: 0 30px 0 15px;
   width: 60vw;
+  border: none;
+  cursor: pointer;
+}
+
+.ant-input-affix-wrapper-focused{
+  border-color: none;
+}
+
+.ant-input-affix-wrapper:hover{
+  border: none;
+  background: rgba(255,255,255,.5);
 }
 
 .ant-input-affix-wrapper>span>span>svg{

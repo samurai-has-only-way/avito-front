@@ -5,7 +5,7 @@ import {
   UserOutlined,
 } from '@ant-design/icons';
 import { Input } from 'antd';
-import Img from 'next/image';
+import Image from 'next/image';
 
 import {
   Container,
@@ -15,16 +15,34 @@ import {
   HeaderItem,
   HeaderInput,
   Basket,
+  SpanBurger,
+  SpanCenter,
+  SpanTop,
+  SpanBottom,
 } from './Header.styled';
+
+const logoLoader = () => {
+  return 'https://static.wbstatic.net/i/header/logo-v1.svg'
+}
 
 const Header: React.FC = () => {
   return (
     <Container>
       <HeaderItem>
-        <Burger style={{ cursor: 'pointer' }} />
+        <Burger>
+          <SpanTop />
+          <SpanCenter />
+          <SpanBottom />
+        </Burger>
       </HeaderItem>
       <Logo>
-        <Img src="https://static.wbstatic.net/i/header/logo-v1.svg"  alt="" />
+        <Image 
+          src="https://static.wbstatic.net/i/header/logo-v1.svg"  
+          loader={logoLoader}
+          alt="logo" 
+          width={240}
+          height={64}
+        />
       </Logo>
       <HeaderInput>
         <Input
