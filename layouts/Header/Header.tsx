@@ -15,17 +15,18 @@ import {
   HeaderItem,
   HeaderInput,
   Basket,
-  SpanBurger,
   SpanCenter,
   SpanTop,
   SpanBottom,
 } from './Header.styled';
 
-const logoLoader = () => {
-  return 'https://static.wbstatic.net/i/header/logo-v1.svg'
-}
+
 
 const Header: React.FC = () => {
+  const logoLoader = () => {
+    return 'https://static.wbstatic.net/i/header/logo-v1.svg';
+  };
+
   return (
     <Container>
       <HeaderItem>
@@ -46,8 +47,8 @@ const Header: React.FC = () => {
       </Logo>
       <HeaderInput>
         <Input
-          size="middle"
-          placeholder="Я ищу..."
+          size='middle'
+          placeholder='Я ищу...'
           prefix={<SearchOutlined />}
         />
       </HeaderInput>
